@@ -1,3 +1,49 @@
-<html>
-Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Dice Generator</h1>
+<p>Select your Dice from the options below</p>
+
+<form onsubmit="selectDice(event,this)">
+    <input type="radio" id="d6" name="dice" value="6">
+    <label for="d6">Six Sided Dice</label><br>
+    <input type="radio" id="d8" name="dice" value="8">
+    <label for="d8">Eight Sided Dice</label><br>
+    <input type="radio" id="d10" name="dice" value="10">
+    <label for="10">Ten Sided Dice</label><br>
+    <button>Roll Dice</button>
+</form>
+
+<div id = "result">
+
+
+</div>
+
+
+<script>
+    function selectDice(event,form) {
+    event.preventDefault();
+
+    //get value of radio button
+
+  console.log (form.dice.value)
+  let diceSides = form.dice.value
+  
+//generate a random number limited by value of radio button
+
+  let x = Math.floor(Math.random() * diceSides) +1
+
+  console.log (x)
+
+//display that random number
+
+ document.getElementById("result").innerHTML="You have rolled" + x
+
+    }
+    </script>
+</body>
 </html>
