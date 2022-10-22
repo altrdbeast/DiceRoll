@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <script scr="script.js"></script>
 </head>
 <body>
 <h1>Dice Generator</h1>
@@ -18,32 +19,7 @@
     <button>Roll Dice</button>
 </form>
 
-<div id = "result">
+<div id = "result"></div>
 
-
-</div>
-
-
-<script>
-    function selectDice(event,form) {
-    event.preventDefault();
-
-    //get value of radio button
-
-  console.log (form.dice.value)
-  let diceSides = form.dice.value
-  
-//generate a random number limited by value of radio button
-
-  let x = Math.floor(Math.random() * diceSides) +1
-
-  console.log (x)
-
-//display that random number
-
- document.getElementById("result").innerHTML="You have rolled" + x
-
-    }
-    </script>
 </body>
 </html>
