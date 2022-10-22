@@ -9,5 +9,5 @@ let x = Math.floor(Math.random() * diceSides) +1
 
 //display that random number
 
- document.getElementById("result").innerHTML="You have rolled" + x
+ document.getElementById("result").innerHTML="You have rolled " + x
 }
